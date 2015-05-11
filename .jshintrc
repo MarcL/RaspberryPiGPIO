@@ -5,5 +5,8 @@
     "eqeqeq": true,
     "noarg": true,
     "mocha": true,
-    "unused": true
+    "unused": true,
+    "globals": {
+        "sinon": true
+    }
 }
