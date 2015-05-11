@@ -1,0 +1,24 @@
+{
+  "name": "RaspberryPiGPIO",
+  "version": "1.0.0",
+  "description": "Experimenting with Raspberry Pi's GPIO to control external devices",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarcL/RaspberryPiGPIO.git"
+  },
+  "keywords": [
+    "GPIO",
+    "raspberry",
+    "pi"
+  ],
+  "author": "Marc Littlemore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarcL/RaspberryPiGPIO/issues"
+  },
+  "homepage": "https://github.com/MarcL/RaspberryPiGPIO"
+}
