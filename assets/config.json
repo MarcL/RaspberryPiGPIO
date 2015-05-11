@@ -1,0 +1,12 @@
+{
+    "tasks": [
+        {
+            "type": "Sleep",
+            "time": 3000
+        },
+        {
+            "type": "Sound",
+            "filename": "assets/sound/cuckoo-clock.mp3"
+        }
+    ]
+}
