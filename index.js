@@ -7,8 +7,15 @@
 // });
 
 var SoundTask = require('./lib/tasks/SoundTask');
+var SleepTask = require('./lib/tasks/SleepTask');
+
+var sleepTask = new SleepTask(3000);
 var soundTask = new SoundTask('assets/sound/cuckoo-clock.mp3');
-soundTask.play().then(function(data) {
+
+sleepTask.execute().then(function(data) {
+    console.log(data);
+    return soundTask.execute();
+}).then(function(data) {
     console.log(data);
 }, function(error) {
     console.log('Error: ' + error);
