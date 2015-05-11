@@ -10,7 +10,7 @@ var fileList = [
     'test/**/*.js'
 ];
 
-gulp.task('lint', function() {
+gulp.task('jshint', function() {
     return gulp.src(fileList)
         .pipe(jshint())
         .pipe(jshint.reporter(jshintStylish));
@@ -26,4 +26,5 @@ gulp.task('jscs', function () {
         .pipe(jscs());
 });
 
-gulp.task('default', ['lint', 'jscs', 'test']);
+gulp.task('lint', ['jshint', 'jscs'])
+gulp.task('default', ['lint', 'test']);

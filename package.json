@@ -24,6 +24,7 @@
   "devDependencies": {
     "chai": "^2.3.0",
     "chai-as-promised": "^5.0.0",
+    "ghooks": "^0.3.2",
     "gulp": "^3.8.11",
     "gulp-jscs": "^1.6.0",
     "gulp-jshint": "^1.10.0",
@@ -37,5 +38,11 @@
     "lame": "^1.2.2",
     "onoff": "^1.0.2",
     "speaker": "^0.2.5"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "gulp lint",
+      "pre-push": "gulp test"
+    }
   }
 }
