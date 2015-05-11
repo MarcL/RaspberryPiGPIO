@@ -1,11 +1,6 @@
 var TaskRunner = require('./lib/TaskRunner');
-var registeredTasks = require('./lib/RegisteredTasks');
-
+var TaskFactory = require('./lib/TaskFactory');
 var config = require('./assets/config');
 
-var taskList = config.tasks.map(function(task) {
-    return registeredTasks[task.type](task);
-});
-
-var taskRunner = new TaskRunner(taskList);
+var taskRunner = new TaskRunner(new TaskFactory(config));
 taskRunner.execute();
