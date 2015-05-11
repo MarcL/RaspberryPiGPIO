@@ -26,6 +26,9 @@
     "chai-as-promised": "^5.0.0"
   },
   "dependencies": {
-    "onoff": "^1.0.2"
+    "es6-promise": "^2.1.1",
+    "lame": "^1.2.2",
+    "onoff": "^1.0.2",
+    "speaker": "^0.2.5"
   }
 }
