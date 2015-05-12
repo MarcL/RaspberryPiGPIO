@@ -1,7 +1,7 @@
-var SleepTask = require('../../lib/tasks/SleepTask');
+var DelayTask = require('../../lib/tasks/DelayTask');
 
 // TODO: Need to get sinon.useFakeTimers() working corrctly.
-describe('SleepTask', function() {
+describe('DelayTask', function() {
 
     beforeEach(function(done) {
         done();
@@ -13,18 +13,18 @@ describe('SleepTask', function() {
 
     it('should be fulfilled after timeout', function(done) {
         var timeoutMs = 100;
-        var sleepTask = new SleepTask(timeoutMs);
+        var delayTask = new DelayTask(timeoutMs);
 
-        sleepTask.execute()
+        delayTask.execute()
             .should.be.fulfilled
             .notify(done);
     });
 
     it('should be fulfilled with correct data', function(done) {
         var timeoutMs = 100;
-        var sleepTask = new SleepTask(timeoutMs);
+        var delayTask = new DelayTask(timeoutMs);
 
-        sleepTask.execute()
+        delayTask.execute()
             .should.be.fulfilled
             .and.eventually.equal('Finished sleeping: ' + timeoutMs + 'ms')
             .notify(done);
