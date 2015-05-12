@@ -1,6 +1,5 @@
-var TaskRunner = require('./lib/TaskRunner');
-var TaskFactory = require('./lib/TaskFactory');
+var PiController = require('./lib/PiController');
 var config = require('./assets/config');
 
-var taskRunner = new TaskRunner(new TaskFactory(config));
-taskRunner.execute();
+var piController = new PiController(config);
+piController.execute();

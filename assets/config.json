@@ -1,7 +1,7 @@
 {
     "tasks": [
         {
-            "type": "Sleep",
+            "type": "Delay",
             "time": 3000
         },
         {

@@ -1,6 +1,11 @@
 var RegisteredTasks = require('../lib/RegisteredTasks');
 
 describe('RegisteredTasks', function() {
+    before(function(done) {
+        RegisteredTasks.clear();
+        done();
+    });
+
     it('should contain no tasks when initialised', function() {
         RegisteredTasks.list().length.should.equal(0);
     });
@@ -8,6 +13,12 @@ describe('RegisteredTasks', function() {
     it('should contain 1 tasks when one is added', function() {
         RegisteredTasks.add('test');
         RegisteredTasks.list().length.should.equal(1);
+    });
+
+    it('should contain 0 tasks when one is added and then cleared', function() {
+        RegisteredTasks.add('test');
+        RegisteredTasks.clear();
+        RegisteredTasks.list().length.should.equal(0);
     });
 
     it('should create task when it exists', function() {
