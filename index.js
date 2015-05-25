@@ -10,7 +10,7 @@ var led = new Gpio(2, 'out');
 var state = 0;
 
 console.log('Starting...');
-setInterval(changeLed, 1000);
+setInterval(changeLed, 400);
 
 function changeLed() {
     led.writeSync(state);
