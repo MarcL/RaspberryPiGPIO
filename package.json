@@ -35,8 +35,8 @@
   },
   "dependencies": {
     "es6-promise": "^2.1.1",
-    "johnny-five": "^0.8.76",
     "lame": "^1.2.2",
+    "onoff": "^1.0.2",
     "speaker": "^0.2.5"
   },
   "config": {
