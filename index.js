@@ -9,10 +9,16 @@ var led = new Gpio(2, 'out');
 
 var state = 0;
 
+console.log('Starting...');
 setInterval(changeLed, 1000);
 
 function changeLed() {
-    console.log('LED: ' + state);
     led.writeSync(state);
     state = (state === 1) ? 0 : 1;
 }
+
+process.on('SIGINT', function() {
+    console.log('Shutdown...');
+    led.unexport();
+    process.exit();
+});
