@@ -1,16 +1,33 @@
 {
+    "trigger" : {
+        "type": "Button",
+        "gpio": 3
+    },
     "tasks": [
         {
-            "type": "LED",
+            "type": "Delay",
+            "time": 500
+        },
+        {
+            "type": "Led",
             "gpio": 2,
-            "time": 400
+            "time": 333
         },
         {
             "type": "Delay",
-            "time": 1000
+            "time": 500
         },
         {
-            "type": "LED",
+            "type": "Led",
+            "gpio": 2,
+            "time": 666
+        },
+        {
+            "type": "Delay",
+            "time": 500
+        },
+        {
+            "type": "Led",
             "gpio": 2,
             "time": 1000
         },
