@@ -1,6 +1,11 @@
 {
     "tasks": [
         {
+            "type": "LED",
+            "gpio": 2,
+            "time": 1000
+        },
+        {
             "type": "Delay",
             "time": 3000
         },
