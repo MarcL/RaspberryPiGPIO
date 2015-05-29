@@ -3,11 +3,16 @@
         {
             "type": "LED",
             "gpio": 2,
-            "time": 1000
+            "time": 400
         },
         {
             "type": "Delay",
-            "time": 3000
+            "time": 1000
+        },
+        {
+            "type": "LED",
+            "gpio": 2,
+            "time": 1000
         },
         {
             "type": "Sound",
