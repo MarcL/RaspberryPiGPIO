@@ -11,15 +11,13 @@ describe('TaskFactory', function() {
         expect(fn).to.throw('No tasks found');
     });
 
-    // it('should throw exception if task in config is not registered', function() {
-    // 	var config = {
-    // 		tasks: [
-    // 			{
-    // 				type: 'UnknownTask'
-    // 			}
-    // 		]
-    // 	};
-    // 	var fn = function() { new TaskFactory(config); };
-    // 	expect(fn).to.throw('Task not registered : UnknownTask');
-    // });
+    it('should throw exception if task in config is not registered', function() {
+        var tasks = [
+            {
+                type: 'UnknownTask'
+            }
+		];
+        var fn = function() { new TaskFactory(tasks); };
+        expect(fn).to.throw('Task not registered : UnknownTask');
+    });
 });

@@ -38,12 +38,12 @@ describe('RegisteredTasks', function() {
         callback.calledWith(task).should.equal(true);
     });
 
-    it('should return undefined when trying to create a task that does not exist', function() {
+    it('should throw an error when trying to create a task that does not exist', function() {
         var callback = sinon.spy();
         RegisteredTasks.add('test', callback);
 
-        var task = {type: 'unknown'};
-        var returned = RegisteredTasks.create(task);
-        expect(returned).to.be.a('undefined');
+        var task = {type: 'UnknownTask'};
+        var fn = function() { RegisteredTasks.create(task); };
+        expect(fn).to.throw('Task not registered : UnknownTask');
     });
 });
