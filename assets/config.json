@@ -1,7 +1,9 @@
 {
     "trigger" : {
-        "type": "Button",
-        "gpio": 3
+        "type": "RandomDelay",
+        "name": "randomTrigger",
+        "min": 1000,
+        "max": 2000
     },
     "tasks": [
         {
@@ -11,25 +13,11 @@
         {
             "type": "Led",
             "gpio": 2,
-            "time": 333
-        },
-        {
-            "type": "Delay",
-            "time": 500
-        },
-        {
-            "type": "Led",
-            "gpio": 2,
-            "time": 666
-        },
-        {
-            "type": "Delay",
-            "time": 500
-        },
-        {
-            "type": "Led",
-            "gpio": 2,
             "time": 1000
+        },
+        {
+            "type": "Delay",
+            "time": 500
         },
         {
             "type": "Sound",
