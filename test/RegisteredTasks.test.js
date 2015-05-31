@@ -1,7 +1,7 @@
 var RegisteredTasks = require('../lib/RegisteredTasks');
 
 describe('RegisteredTasks', function() {
-    before(function(done) {
+    beforeEach(function(done) {
         RegisteredTasks.clear();
         done();
     });
@@ -19,6 +19,22 @@ describe('RegisteredTasks', function() {
         RegisteredTasks.add('test');
         RegisteredTasks.clear();
         RegisteredTasks.list().length.should.equal(0);
+    });
+
+    it('should correctly remove task', function() {
+        RegisteredTasks.add('test');
+        RegisteredTasks.remove('test');
+        RegisteredTasks.list().length.should.equal(0);
+    });
+
+    it('should throw an error when removing a task that does not exist', function() {
+        var fn = function() { RegisteredTasks.remove('test'); };
+        expect(fn).to.throw(Error);
+    });
+
+    it('should throw correct error when removing a task that does not exist', function() {
+        var fn = function() { RegisteredTasks.remove('test'); };
+        expect(fn).to.throw('Task has not been registered : test');
     });
 
     it('should create task when it exists', function() {
