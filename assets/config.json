@@ -1,10 +1,12 @@
 {
-    "trigger" : {
-        "type": "RandomDelay",
-        "name": "randomTrigger",
-        "min": 1000,
-        "max": 2000
-    },
+    "triggers" : [
+        {
+            "type": "ButtonTrigger",
+            "name": "push button",
+            "taskListName": "attract",
+            "gpio" : 4
+        }
+    ],
     "taskLists" : {
         "attract" : [
             {
