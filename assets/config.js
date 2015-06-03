@@ -1,11 +1,18 @@
 var config = {
     triggers: [
         {
-            type: "ButtonTrigger",
-            name: "push button",
+            type: "RandomDelayTrigger",
+            name: "random attract",
             taskListName: "attract",
-            gpio: 4
+            min: 1000,
+            max: 3000
         }
+        // {
+        //     type: "ButtonTrigger",
+        //     name: "push button",
+        //     taskListName: "attract",
+        //     gpio: 4
+        // }
     ],
     taskLists: {
         attract: [
@@ -27,26 +34,7 @@ var config = {
                 filename: "assets/sound/cuckoo-clock.mp3"
             }
         ]
-    },
-    tasks: [
-        {
-        	type: "Delay",
-            time: 500
-        },
-        {
-            type: "Led",
-            gpio: 2,
-            time: 1000
-        },
-        {
-            type: "Delay",
-            time: 500
-        },
-        {
-            type: "Sound",
-            filename: "assets/sound/cuckoo-clock.mp3"
-        }
-    ]
+    }
 };
 
 module.exports = config;
