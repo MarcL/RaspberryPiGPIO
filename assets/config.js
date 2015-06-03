@@ -10,7 +10,7 @@ var config = {
         // {
         //     type: "ButtonTrigger",
         //     name: "push button",
-        //     taskListName: "attract",
+        //     taskListName: "scareMe",
         //     gpio: 4
         // }
     ],
